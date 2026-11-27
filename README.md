@@ -8,7 +8,7 @@
 
 使用 Node.js 22，在项目目录运行 `npm ci` 安装依赖，然后运行 `npm run dev`。本地预览地址为 <http://localhost:4180/>。
 
-运行 `npm run build` 可检查 TypeScript 并生成静态站点。推送到 `main` 后，GitHub Actions 会自动构建并发布到 GitHub Pages。
+运行 `npm run build` 可检查 TypeScript 并生成本地预览。更新官网时，运行 `npm run build:pages`，将源码与生成的 `docs/` 一起提交到 `main`。GitHub Pages 会从该目录自动发布。
 
 ## 本轮行为
 

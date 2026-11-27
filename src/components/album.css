@@ -1,0 +1,130 @@
+.album-section{position:relative;color:var(--ink,#0d2530);background:var(--paper,#fcfaf6);isolation:isolate}
+.album-animated{height:360vh}
+.album-stage{position:relative;min-height:700px;display:flex;flex-direction:column;padding:92px 28px 26px}
+.album-animated .album-stage{position:sticky;top:0;height:100svh;min-height:620px;overflow:hidden}
+.album-scroll-anchor{position:absolute;top:74%;left:0;width:1px;height:1px;scroll-margin-top:82px;pointer-events:none}
+.album-header{position:relative;z-index:16;text-align:center;pointer-events:none;flex-shrink:0}
+.album-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:600;letter-spacing:2px;color:var(--accent,#ff2a5f)}
+.album-eyebrow>span{width:5px;height:5px;border-radius:50%;background:currentColor}
+.album-header h2{font-size:clamp(28px,3.05vw,43px);font-weight:650;letter-spacing:-1.6px;line-height:1.35;margin:15px 0 13px}
+.album-description{position:relative;min-height:35px}
+.album-description p{font-size:12px;line-height:1.9;color:#7e8587;margin:0}
+.album-description-later{position:absolute;left:0;right:0;top:0}
+.album-mobile-break{display:none}
+.album-scene{position:relative;flex:1;min-height:390px;width:min(1180px,100%);margin:auto}
+.album-phone-deck,.album-memories{position:absolute;inset:0;pointer-events:none}
+.album-device{position:absolute;top:32%;left:50%;width:0;height:0;pointer-events:none;will-change:transform}
+.album-device-drift{animation:album-drift 4.5s ease-in-out infinite}
+.album-device-frame{width:clamp(102px,10.7vw,143px);aspect-ratio:9/18.5;padding:5px;border:1px solid #767979;border-radius:25px;background:linear-gradient(120deg,#c1c5c6 0,#292c2e 15%,#0d1012 48%,#777e7f 85%,#c0c3c4);box-shadow:0 20px 25px -17px #0d25304d,0 4px 9px #0d253021;transform:translate(-50%,-50%);position:relative}
+.album-device-frame:before,.album-device-frame:after{content:'';position:absolute;right:-2px;top:48px;width:2px;height:24px;border-radius:2px;background:#616869}
+.album-device-frame:after{right:auto;left:-2px;top:40px;height:15px}
+.album-device-screen{position:relative;height:100%;overflow:hidden;border-radius:20px;background:#15212a;color:white}
+.album-device-screen:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#00141c22,transparent 45%,#00141ce0);pointer-events:none}
+.album-device-screen>img{width:100%;height:100%;object-fit:cover}
+.album-device-island{position:absolute;left:50%;top:7px;z-index:2;width:32%;height:9px;border-radius:8px;background:#070909;transform:translateX(-50%)}
+.album-device-time{position:absolute;left:10px;top:9px;z-index:2;font-size:5px;letter-spacing:.2px}
+.album-device-brand{position:absolute;right:8px;top:9px;z-index:2;font-size:5px}
+.album-device-caption{position:absolute;bottom:21px;left:10px;right:5px;z-index:2;display:flex;flex-direction:column;gap:5px}
+.album-device-caption>span{font-size:6px;letter-spacing:1px;color:#ffffffb3}
+.album-device-caption>strong{font-size:11px;font-weight:500;letter-spacing:.8px}
+.album-device-home{position:absolute;left:50%;bottom:7px;z-index:2;width:32%;height:2px;border-radius:4px;background:#ffffffc9;transform:translateX(-50%)}
+.album-book{position:absolute;top:56%;left:50%;width:min(720px,76%);margin-left:max(-360px,-38%);z-index:4;transform-origin:50% 50%}
+.album-book-cover{position:relative;padding:7px 8px 13px;border-radius:3px 4px 7px 5px;background:#163443;box-shadow:0 22px 40px -19px #0d25305c,0 5px 1px -2px #0b293b,0 9px 1px -4px #9a978c}
+.album-book-pages{display:grid;grid-template-columns:1fr 1fr;position:relative;min-height:220px;background:#fcf9ed;border-radius:2px;box-shadow:0 3px 0 #e4dfce,0 5px 0 #faf7ed,0 7px 0 #c9c4b8;overflow:hidden}
+.album-book-pages:after{content:'';position:absolute;top:0;bottom:0;left:calc(50% - 13px);width:26px;pointer-events:none;background:linear-gradient(90deg,transparent,#5b554f1a 37%,#3a352326 47%,#fcfcf48a 54%,#ffffff7a 60%,transparent)}
+.album-page{position:relative;padding:21px 24px 25px;background-image:repeating-linear-gradient(0deg,#9f907d05 0px,#9f907d05 1px,transparent 1px,transparent 3px),radial-gradient(ellipse at 20% 30%,#f5e6ca55,transparent 80%)}
+.album-page-left{background-color:#fcf9ee;background-image:linear-gradient(90deg,transparent 92%,#00000008),repeating-linear-gradient(0deg,#9f907d05 0px,#9f907d05 1px,transparent 1px,transparent 3px)}
+.album-page-right{background-color:#fffdf3}
+.album-page-kicker{display:block;font-size:7px;letter-spacing:1.8px;color:#9b9380;margin-bottom:9px}
+.album-page h3{font-family:'Noto Serif SC','Songti SC',SimSun,serif;font-size:19px;line-height:1.6;font-weight:500;letter-spacing:1px;margin:0 0 8px}
+.album-page p{font-size:8px;line-height:1.9;color:#9d9789;margin:0}
+.album-page-number{position:absolute;bottom:9px;left:0;right:0;text-align:center;color:#a9a294;font-size:6px;letter-spacing:2px}
+.album-printed-photos{display:flex;gap:6px;margin-top:12px}
+.album-printed-photos img{width:40px;height:33px;object-fit:cover;padding:2px;background:white;box-shadow:0 2px 4px #483d2a1f;transform:rotate(-4deg)}
+.album-printed-photos img:nth-child(even){transform:rotate(5deg)}
+.album-printed-right{justify-content:center;gap:9px;margin-top:23px}
+.album-printed-right img{width:58px;height:66px}
+.album-page .album-handwritten{font-family:'Noto Serif SC','Songti SC',SimSun,serif;transform:rotate(-4deg);font-size:13px;line-height:1.9;color:#7e796c;letter-spacing:3px;text-align:center;margin-top:18px}
+.album-book-ribbon{position:absolute;left:calc(50% + 25px);top:95%;width:15px;height:27px;background:#d45164;clip-path:polygon(0 0,100% 0,100% 100%,50% 80%,0 100%);box-shadow:0 3px 4px #0001;z-index:-1}
+.album-memory{position:absolute;left:50%;top:56%;width:clamp(139px,14.2vw,176px);margin-left:clamp(-88px,-7.1vw,-69.5px);z-index:15;will-change:transform;transform-origin:50% 90%}
+.album-memory-button{position:relative;display:block;width:100%;padding:7px 7px 13px;border:1px solid #ece8df;background:#fffefa;border-radius:2px;color:var(--ink,#0d2530);box-shadow:0 12px 25px -13px #0d25306b,0 3px 5px #0d25300d;text-align:left;cursor:zoom-in;transition:box-shadow .2s,background .2s}
+.album-memory-button:hover{background:white;box-shadow:0 17px 30px -13px #0d253080,0 3px 5px #0d25301f}
+.album-memory-button:focus-visible{outline:3px solid var(--accent,#ff2a5f);outline-offset:5px}
+.album-memory-button>img{display:block;width:100%;aspect-ratio:4/4.35;object-fit:cover;background:#eae7dc}
+.album-memory-title{display:block;font-size:10px;line-height:1.7;letter-spacing:.4px;margin-top:8px;padding-right:10px}
+.album-memory-note{display:block;font-size:6px;color:#a09b90;line-height:1.5;margin-top:3px}
+.album-memory-corner{position:absolute;bottom:20px;right:8px;color:#a09b90;font-size:12px}
+.album-bottom{display:flex;align-items:center;justify-content:center;gap:16px;position:relative;z-index:17;flex-shrink:0;color:#929897;font-size:9px;letter-spacing:1px;padding-top:12px}
+.album-progress{width:112px;height:1px;background:#d9dcda;overflow:hidden}
+.album-progress>span{display:block;width:100%;height:100%;background:var(--accent,#ff2a5f);transform-origin:left center}
+.album-dialog{width:min(880px,92vw);max-width:none;max-height:92svh;border:0;border-radius:3px;padding:0;background:var(--paper,#fcfaf6);color:var(--ink,#0d2530);overflow:auto;box-shadow:0 25px 90px #0005}
+.album-dialog::backdrop{background:#081b28c9;backdrop-filter:blur(7px)}
+.album-dialog-content{position:relative;padding:15px}
+.album-dialog-close{position:absolute;z-index:2;right:24px;top:24px;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:1px solid #ffffff80;background:#fcfaf6e8;color:#0d2530;font-size:25px;line-height:1;cursor:pointer;box-shadow:0 3px 12px #0002}
+.album-dialog-close:focus-visible{outline:3px solid var(--accent,#ff2a5f);outline-offset:3px}
+.album-dialog-image{display:block;width:100%;max-height:72svh;object-fit:contain;background:#e9e6dd}
+.album-dialog-caption{padding:18px 9px 9px}
+.album-dialog-caption h3{font-size:17px;font-weight:500;letter-spacing:1px;margin:0}
+.album-dialog-caption p{font-size:12px;color:#858a88;margin:7px 0 0}
+@keyframes album-drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.album-static .album-stage{padding:76px 24px 52px;min-height:0}
+.album-static .album-scroll-anchor{display:none}
+.album-static .album-scene{display:flex;flex-direction:column;min-height:0;flex:none;gap:44px;margin-top:40px;max-width:1000px}
+.album-static .album-phone-deck{position:relative;inset:auto;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px}
+.album-static .album-device{position:relative;left:auto;top:auto;width:auto;height:auto}
+.album-static .album-device-drift{animation:none}
+.album-static .album-device-frame{width:100%;transform:none;border-radius:21px}
+.album-static .album-device-screen{border-radius:17px}
+.album-static .album-book{position:relative;top:auto;left:auto;margin:0 auto;width:min(720px,100%);scroll-margin-top:110px}
+.album-static .album-memories{position:relative;inset:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin:0 auto 18px;width:min(800px,100%);pointer-events:auto}
+.album-static .album-memory{position:relative;left:auto;top:auto;width:auto;margin:0}
+.album-static .album-memory-title{font-size:12px}
+.album-static .album-memory-note{font-size:9px}
+.album-static .album-bottom{display:none}
+@media(max-width:899px){
+ .album-header h2{font-size:clamp(25px,5.3vw,37px);letter-spacing:-1px}
+ .album-description p{font-size:11px;max-width:390px;margin:auto}
+ .album-static .album-phone-deck{display:flex;flex-wrap:wrap;justify-content:center;gap:18px 12px}
+ .album-static .album-device{flex:0 0 calc(25% - 10px);max-width:132px}
+ .album-static .album-memories{gap:15px;grid-template-columns:repeat(2,minmax(0,1fr));max-width:530px}
+ .album-memory-button>img{aspect-ratio:4/4.1}
+ .album-static .album-memory:nth-child(odd){transform:rotate(-3deg)}
+ .album-static .album-memory:nth-child(even){transform:rotate(3deg)}
+ .album-page{padding:18px 17px 27px}
+ .album-page h3{font-size:16px}
+ .album-printed-photos{flex-wrap:wrap;gap:4px}
+ .album-printed-photos img{width:30px;height:28px}
+ .album-printed-right{gap:4px;margin-top:26px}
+ .album-printed-right img{width:40px;height:48px}
+ .album-page .album-handwritten{font-size:11px;letter-spacing:2px}
+}
+@media(max-width:480px){
+ .album-static .album-stage{padding:65px 20px 46px}
+ .album-mobile-break{display:block}
+ .album-description{min-height:45px}
+ .album-eyebrow{font-size:10px;letter-spacing:1.5px}
+ .album-static .album-device{flex-basis:calc(25% - 9px)}
+ .album-device-frame{padding:3px!important;border-radius:16px!important}
+ .album-device-screen{border-radius:12px!important}
+ .album-device-island{height:5px;top:5px}
+ .album-device-time,.album-device-brand{display:none}
+ .album-device-caption{left:6px;bottom:14px;gap:3px}
+ .album-device-caption>strong{font-size:7px}
+ .album-device-caption>span{font-size:5px;letter-spacing:0}
+ .album-book-pages{min-height:210px}
+ .album-page{padding:16px 11px 24px}
+ .album-page-kicker{font-size:6px;letter-spacing:.6px}
+ .album-page h3{font-size:14px;letter-spacing:0}
+ .album-page p{font-size:7px}
+ .album-printed-right img{width:32px;height:41px}
+ .album-page .album-handwritten{font-size:10px;letter-spacing:1px}
+ .album-memory-note{font-size:8px!important}
+ .album-dialog-content{padding:8px}
+ .album-dialog-close{right:17px;top:17px}
+}
+@media(prefers-reduced-motion:reduce){.album-device-drift{animation:none}.album-memory-button{transition:none}}
+
+.album-eyebrow{font-size:14px}.album-description p{font-size:16px}.album-memory-title,.album-static .album-memory-title{font-size:14px}.album-memory-note,.album-static .album-memory-note{font-size:11px}.album-bottom{font-size:12px}
+@media(max-height:800px) and (min-width:900px){.album-animated .album-stage{padding-top:84px}.album-animated .album-scene{min-height:0}.album-animated .album-book,.album-animated .album-memory{top:calc(56% - 45px)}}
+@media(max-height:740px) and (min-width:900px){.album-animated .album-book,.album-animated .album-memory{top:calc(56% - 70px)}.album-animated .album-book{width:min(660px,76%);margin-left:max(-330px,-38%)}.album-animated .album-book-pages{min-height:200px}.album-animated .album-page{padding-top:15px;padding-bottom:20px}.album-animated .album-page h3{font-size:16px}.album-animated .album-page .album-handwritten{font-size:11px}}
+@media(max-width:899px){.album-description p{font-size:16px;line-height:1.8}.album-memory-note{font-size:10px!important}}
